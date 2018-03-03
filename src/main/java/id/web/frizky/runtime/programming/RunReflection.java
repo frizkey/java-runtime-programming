@@ -20,7 +20,7 @@ public class RunReflection {
                 try {
                     postReflection();
                 } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
+                    System.out.println("SOMETHING BAD HAPPENDS");
                 }
                 break;
         }
