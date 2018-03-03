@@ -36,18 +36,18 @@ public class RunJavassist {
             System.out.println("Jerry is an animal");
         }
         if (instance instanceof Mouse) {
-            ((Mouse) instance).hide();
+            ((Mouse) instance).functionSpecificToMouse();
             System.out.println("Jerry is a mouse");
         }
     }
 
     private void preJavassist() {
-        Object mice = new Mouse();
-        if (mice instanceof Animal) {
-            ((Animal) mice).functionGenericToAnimal();
+        Object instance = new Mouse();
+        if (instance instanceof Animal) {
+            ((Animal) instance).functionGenericToAnimal();
             System.out.println("Jerry is an animal");
         }
-        ((Mouse) mice).hide();
+        ((Mouse) instance).functionSpecificToMouse();
         System.out.println("Jerry is not animal");
     }
 }
